@@ -1,0 +1,59 @@
+---
+title: "Literate Programming with Quarto"
+author: "Katherine Martini"
+date: "02/26/2025"
+format:
+    html: default
+    pdf: default
+bibliography: references.bib
+---
+## Introduction
+The World Development Indicators dataset provides comprehensive global economic and health metrics [@worldbank2022]. 
+
+
+Here are some statistics from the WDI dataset
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')
+
+selected_col = ['gdp_per_capita','life_expectancy', 'unemployment_rate']
+
+summary_table = df[selected_col].describe().T
+
+summary_table = summary_table[["mean", "std", "min", "25%", "50%", "75%", "max"]]
+summary_table.columns = ["Mean", "Std Dev", "Min", "25th Percentile", "Median", "75th Percentile", "Max"]
+
+display(summary_table)
+```
+
+The summary statistics show various things, but one to note is the GDP per capita and its high standard deviation. This shows that this variation between countries and their wealth disparities. What this tells us is that there some countries that are very wealthy and very poor, and this variation is shown through the high standard deviation. As seen in articles [@gapminder], there is a high correlation with a high GDP and a higher life expectancy.  
+
+## Plots
+
+```{python, echo: FALSE}
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')
+
+plt.figure(figsize=(8, 5))
+plt.hist(df["gdp_per_capita"].dropna(), bins=30, edgecolor="black")
+plt.xlabel("GDP per Capita")
+plt.ylabel("Number of Countries")
+plt.title("Distribution of GDP per Capita (2022)")
+plt.show()
+```
+
+```{python, echo: FALSE"}
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')
+
+plt.figure(figsize=(8, 5))
+plt.scatter(df["gdp_per_capita"], df["life_expectancy"], alpha=0.7)
+plt.xlabel("GDP per Capita")
+plt.ylabel("Life Expectancy (Years)")
+plt.title("Life Expectancy vs GDP Per Capita")
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.show()
+```

@@ -1,0 +1,48 @@
+---
+title: "Literate Programming with Quarto"
+author: "Katherine Martini"
+date: "02/26/2025"
+format: revealjs
+theme: solarized
+transition: fade
+---
+# Introduction
+
+- Using World Development Indicators dataset
+- Focusing specifically on GDP per capita, Life Expectancy, and Unemployment Rates
+- Data for the year 2022
+
+# Summary Statistics
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')
+
+selected_col = ['gdp_per_capita','life_expectancy', 'unemployment_rate']
+
+summary_table = df[selected_col].describe().T
+
+summary_table = summary_table[["mean", "std", "min", "25%", "50%", "75%", "max"]]
+summary_table.columns = ["Mean", "Std Dev", "Min", "25th Percentile", "Median", "75th Percentile", "Max"]
+
+display(summary_table)
+```
+
+# Life Expectancy vs GDP per Capita
+
+```{python, echo=FALSE}
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')
+
+plt.figure(figsize=(8, 5))
+plt.scatter(df["gdp_per_capita"], df["life_expectancy"], alpha=0.7)
+plt.xlabel("GDP per Capita")
+plt.ylabel("Life Expectancy (Years)")
+plt.title("Life Expectancy vs GDP Per Capita")
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.show()
+```
+
+# Thank you for watching this presentation!
