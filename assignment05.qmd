@@ -81,12 +81,11 @@ from IPython.display import Markdown
 from tabulate import tabulate
 
 
-table = [["GDP per Capita","696,000",1.989e30],
-         ["Life Expectancy","6,371",5.972e24],
-         ["Moon","1,737",7.34e22],
-         ["Mars","3,390",6.39e23]]
+table = [["GDP per Capita","31308.942",'20345.708'],
+         ["Life Expectancy","7.713","72.416"],
+         ["Unemployment Rate","5.828","7.269"]]
 Markdown(tabulate(
   table, 
-  headers=["Dataset Attribute","Mean", "Standard Deviation"]
+  headers=["Dataset Attribute", "Standard Deviation", "Mean"]
 ))
 ```

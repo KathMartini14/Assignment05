@@ -32,6 +32,6 @@
     "href": "assignment05.html#key-statistics",
     "title": "Literate Programming with Quarto",
     "section": "Key statistics",
-    "text": "Key statistics\n\n\n\n\nTable 1: Key statistics for the WDI dataset\n\n\n\n\n\n\nDataset Attribute\nMean\nStandard Deviation\n\n\n\n\nGDP per Capita\n696,000\n1.989e+30\n\n\nLife Expectancy\n6,371\n5.972e+24\n\n\nMoon\n1,737\n7.34e+22\n\n\nMars\n3,390\n6.39e+23"
+    "text": "Key statistics\n\n\n\n\nTable 1: Key statistics for the WDI dataset\n\n\n\n\n\n\nDataset Attribute\nStandard Deviation\nMean\n\n\n\n\nGDP per Capita\n31308.9\n20345.7\n\n\nLife Expectancy\n7.713\n72.416\n\n\nUnemployment Rate\n5.828\n7.269"
   }
 ]
