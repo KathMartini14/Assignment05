@@ -1,17 +1,25 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "assignment_5"
+  title: "QTM 350 Assignment 05"
   navbar:
     left:
       - href: index.qmd
-
+        text: Home
+      - href: assignment05.qmd
+        text: WDI Report
+      - href: presentation.qmd
+        text: WDI Presentation
+    right:
+    - icon: github
+      href: https://github.com/KathMartini14/Assignment05
 format:
   html:
     theme:
       - cosmo
-      - brand
+      - darkly
     css: styles.css
     toc: true
 

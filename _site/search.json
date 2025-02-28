@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "assignment_5",
+    "title": "QTM350 Assigment 05 Website",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
@@ -26,12 +26,5 @@
     "title": "Literate Programming with Quarto",
     "section": "Plots",
     "text": "Plots\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')\n\nplt.figure(figsize=(8, 5))\nplt.hist(df[\"gdp_per_capita\"].dropna(), bins=30, edgecolor=\"black\")\nplt.xlabel(\"GDP per Capita\")\nplt.ylabel(\"Number of Countries\")\nplt.title(\"Distribution of GDP per Capita (2022)\")\nplt.show()\n\n\n\n\n\n\n\n\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')\n\nplt.figure(figsize=(8, 5))\nplt.scatter(df[\"gdp_per_capita\"], df[\"life_expectancy\"], alpha=0.7)\nplt.xlabel(\"GDP per Capita\")\nplt.ylabel(\"Life Expectancy (Years)\")\nplt.title(\"Life Expectancy vs GDP Per Capita\")\nplt.grid(True, linestyle=\"--\", alpha=0.5)\nplt.show()"
-  },
-  {
-    "objectID": "presentation.html#life-expectancy-vs-gdp-per-capita",
-    "href": "presentation.html#life-expectancy-vs-gdp-per-capita",
-    "title": "Literate Programming with Quarto",
-    "section": "# Life expectancy vs GDP per Capita",
-    "text": "# Life expectancy vs GDP per Capita"
   }
 ]

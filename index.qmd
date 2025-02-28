@@ -1,8 +1,7 @@
 ---
-title: "assignment_5"
+title: "QTM350 Assigment 05 Website"
 
 ---
+# Welcome to the World Development Indicators dataset website
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Visit the tabs above to view analytical report and presentation for this dataset. 

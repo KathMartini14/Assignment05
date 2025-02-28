@@ -2,6 +2,8 @@
 title: "Literate Programming with Quarto"
 author: "Katherine Martini"
 date: "02/26/2025"
+execute: 
+    echo: false
 format:
     html: default
     pdf: default
@@ -13,6 +15,7 @@ The World Development Indicators dataset provides comprehensive global economic 
 
 Here are some statistics from the WDI dataset
 ```{python}
+#| echo: true
 import pandas as pd
 import matplotlib.pyplot as plt
 df = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')
@@ -29,9 +32,17 @@ display(summary_table)
 
 The summary statistics show various things, but one to note is the GDP per capita and its high standard deviation. This shows that this variation between countries and their wealth disparities. What this tells us is that there some countries that are very wealthy and very poor, and this variation is shown through the high standard deviation. As seen in articles [@gapminder], there is a high correlation with a high GDP and a higher life expectancy.  
 
+For a demonstration of a histogram that showcases GDP Distribution, see @fig-gdp-dist.
+
+For a demonstration of a scatter plot that showcases Life Expectancy and GDP trends, see @fig-life-gdp.
+
+To view a table of the dataset's key statistics, see @tbl-statistics.
+
 ## Plots
 
-```{python, echo: FALSE}
+```{python}
+#| label: fig-gdp-dist
+#| fig-cap: "A histogram for the distribution of GDP per capita in 2022"
 import pandas as pd
 import matplotlib.pyplot as plt
 df = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')
@@ -44,7 +55,10 @@ plt.title("Distribution of GDP per Capita (2022)")
 plt.show()
 ```
 
-```{python, echo: FALSE"}
+
+```{python}
+#| label: fig-life-gdp
+#| fig-cap: "A scatter plot that compares the trends between life expectancy and GDP trends in 2022"
 import pandas as pd
 import matplotlib.pyplot as plt
 df = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')
@@ -55,5 +69,23 @@ plt.xlabel("GDP per Capita")
 plt.ylabel("Life Expectancy (Years)")
 plt.title("Life Expectancy vs GDP Per Capita")
 plt.grid(True, linestyle="--", alpha=0.5)
-plt.show()
+plt.show()  
+```
+
+## Key statistics
+
+```{python}
+#| label: tbl-statistics
+#| tbl-cap: Key statistics for the WDI dataset
+from IPython.display import Markdown
+from tabulate import tabulate
+
+table = [["GDP per Capita","696,000",1.989e30],
+         ["Life Expectancy","6,371",5.972e24],
+         ["Moon","1,737",7.34e22],
+         ["Mars","3,390",6.39e23]]
+Markdown(tabulate(
+  table, 
+  headers=["Dataset Attribute","Mean", "Standard Deviation"]
+))
 ```

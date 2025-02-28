@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "QTM350 Assigment 05 Website",
+    "section": "",
+    "text": "Welcome to the World Development Indicators dataset website\nVisit the tabs above to view analytical report and presentation for this dataset."
+  },
+  {
+    "objectID": "assignment05.html",
+    "href": "assignment05.html",
+    "title": "Literate Programming with Quarto",
+    "section": "",
+    "text": "The World Development Indicators dataset provides comprehensive global economic and health metrics (Bank 2022).\nHere are some statistics from the WDI dataset\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')\n\nselected_col = ['gdp_per_capita','life_expectancy', 'unemployment_rate']\n\nsummary_table = df[selected_col].describe().T\n\nsummary_table = summary_table[[\"mean\", \"std\", \"min\", \"25%\", \"50%\", \"75%\", \"max\"]]\nsummary_table.columns = [\"Mean\", \"Std Dev\", \"Min\", \"25th Percentile\", \"Median\", \"75th Percentile\", \"Max\"]\n\ndisplay(summary_table)\n\n\n\n\n\n\n\n\nMean\nStd Dev\nMin\n25th Percentile\nMedian\n75th Percentile\nMax\n\n\n\n\ngdp_per_capita\n20345.707649\n31308.942225\n259.025031\n2570.563284\n7587.588173\n25982.63005\n240862.182448\n\n\nlife_expectancy\n72.416519\n7.713322\n52.997000\n66.782000\n73.514634\n78.47500\n85.377000\n\n\nunemployment_rate\n7.268661\n5.827726\n0.130000\n3.500750\n5.537500\n9.45525\n37.852000\n\n\n\n\n\n\n\nThe summary statistics show various things, but one to note is the GDP per capita and its high standard deviation. This shows that this variation between countries and their wealth disparities. What this tells us is that there some countries that are very wealthy and very poor, and this variation is shown through the high standard deviation. As seen in articles (Gapminder 2022), there is a high correlation with a high GDP and a higher life expectancy.\nFor a demonstration of a histogram that showcases GDP Distribution, see Figure 1.\nFor a demonstration of a scatter plot that showcases Life Expectancy and GDP trends, see Figure 2.\nTo view a table of the dataset’s key statistics, see Table 1."
+  },
+  {
+    "objectID": "assignment05.html#introduction",
+    "href": "assignment05.html#introduction",
+    "title": "Literate Programming with Quarto",
+    "section": "",
+    "text": "The World Development Indicators dataset provides comprehensive global economic and health metrics (Bank 2022).\nHere are some statistics from the WDI dataset\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('/Users/KathMartini/Desktop/qtm350/wdi.csv')\n\nselected_col = ['gdp_per_capita','life_expectancy', 'unemployment_rate']\n\nsummary_table = df[selected_col].describe().T\n\nsummary_table = summary_table[[\"mean\", \"std\", \"min\", \"25%\", \"50%\", \"75%\", \"max\"]]\nsummary_table.columns = [\"Mean\", \"Std Dev\", \"Min\", \"25th Percentile\", \"Median\", \"75th Percentile\", \"Max\"]\n\ndisplay(summary_table)\n\n\n\n\n\n\n\n\nMean\nStd Dev\nMin\n25th Percentile\nMedian\n75th Percentile\nMax\n\n\n\n\ngdp_per_capita\n20345.707649\n31308.942225\n259.025031\n2570.563284\n7587.588173\n25982.63005\n240862.182448\n\n\nlife_expectancy\n72.416519\n7.713322\n52.997000\n66.782000\n73.514634\n78.47500\n85.377000\n\n\nunemployment_rate\n7.268661\n5.827726\n0.130000\n3.500750\n5.537500\n9.45525\n37.852000\n\n\n\n\n\n\n\nThe summary statistics show various things, but one to note is the GDP per capita and its high standard deviation. This shows that this variation between countries and their wealth disparities. What this tells us is that there some countries that are very wealthy and very poor, and this variation is shown through the high standard deviation. As seen in articles (Gapminder 2022), there is a high correlation with a high GDP and a higher life expectancy.\nFor a demonstration of a histogram that showcases GDP Distribution, see Figure 1.\nFor a demonstration of a scatter plot that showcases Life Expectancy and GDP trends, see Figure 2.\nTo view a table of the dataset’s key statistics, see Table 1."
+  },
+  {
+    "objectID": "assignment05.html#plots",
+    "href": "assignment05.html#plots",
+    "title": "Literate Programming with Quarto",
+    "section": "Plots",
+    "text": "Plots\n\n\n\n\n\n\n\n\nFigure 1: A histogram for the distribution of GDP per capita in 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: A scatter plot that compares the trends between life expectancy and GDP trends in 2022"
+  },
+  {
+    "objectID": "assignment05.html#key-statistics",
+    "href": "assignment05.html#key-statistics",
+    "title": "Literate Programming with Quarto",
+    "section": "Key statistics",
+    "text": "Key statistics\n\n\n\n\nTable 1: Key statistics for the WDI dataset\n\n\n\n\n\n\nDataset Attribute\nMean\nStandard Deviation\n\n\n\n\nGDP per Capita\n696,000\n1.989e+30\n\n\nLife Expectancy\n6,371\n5.972e+24\n\n\nMoon\n1,737\n7.34e+22\n\n\nMars\n3,390\n6.39e+23"
+  }
+]
