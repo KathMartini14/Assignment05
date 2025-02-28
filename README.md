@@ -1,2 +1,1 @@
-URL for the report: <>
-URL for the presentation: <>
+URL for the published website: https://kathmartini14.github.io/Assignment05/
